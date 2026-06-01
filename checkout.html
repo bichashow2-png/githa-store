@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متابعة الدفع - غذاء</title>
+    <link rel="stylesheet" href="./style.css?v=7">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="./index.html" class="logo"><img src="./logo.png?v=2" alt="Logo" style="height: 45px;"></a>
+            <nav class="nav-menu">
+                <a href="./index.html">الرئيسية</a>
+                <a href="store.html">المتجر</a>
+                <a href="./categories.html">التصنيفات</a>
+                <a href="bundles.html">الباقات الصحية</a>
+                <a href="./offers.html">العروض</a>
+                <a href="blog.html">المدونة</a>
+                <a href="about.html">من نحن</a>
+                <a href="contact.html">تواصل معنا</a>
+            </nav>
+            <div class="header-icons">
+                <a href="account.html" aria-label="حسابي"><span class="material-icons-outlined">person</span></a>
+                <a href="cart.html" aria-label="سلة التسوق"><span class="material-icons-outlined">shopping_cart</span><span class="cart-badge">2</span></a>
+                <a href="#" class="wallet-icon" aria-label="محفظتي" title="محفظتي"><span class="material-icons-outlined">account_balance_wallet</span></a>
+                <a href="vip.html" aria-label="VIP" title="عضوية VIP"><span class="material-icons-outlined">workspace_premium</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <div class="container">
+                <a href="./index.html">الرئيسية</a>
+                <span class="separator">/</span>
+                <a href="cart.html">سلة التسوق</a>
+                <span class="separator">/</span>
+                <span>إتمام الشراء</span>
+            </div>
+        </nav>
+
+        <section class="container" style="padding-block-start: var(--spacing-lg);">
+            <h1 style="margin-block-end: var(--spacing-xl);">إتمام الشراء</h1>
+
+            <div class="checkout-layout">
+                <!-- Checkout Form -->
+                <form class="checkout-form-section" id="checkoutForm" onsubmit="event.preventDefault(); alert('تم استلام طلبك بنجاح! رقم الطلب: #10293\nشكراً لتسوقك من غذاء.'); window.location.href='../index.html';">
+                    <!-- Billing Details -->
+                    <div class="checkout-box">
+                        <h3>تفاصيل الفاتورة والشحن</h3>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="fullname">الاسم الكامل *</label>
+                                <input type="text" id="fullname" required placeholder="مثال: أحمد محمد">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">رقم الهاتف *</label>
+                                <input type="tel" id="phone" required placeholder="0555xxxxxx">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">البريد الإلكتروني</label>
+                                <input type="email" id="email" placeholder="example@mail.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="wilaya">الولاية *</label>
+                                <select id="wilaya" required>
+                                    <option value="" disabled selected>اختر الولاية</option>
+                                    <option value="16">الجزائر (16)</option>
+                                    <option value="09">البليدة (09)</option>
+                                    <option value="31">وهران (31)</option>
+                                    <option value="25">قسنطينة (25)</option>
+                                    <option value="other">ولاية أخرى</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">البلدية / المدينة *</label>
+                                <input type="text" id="city" required>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="address">العنوان بالتفصيل *</label>
+                                <input type="text" id="address" required placeholder="اسم الحي، رقم الشارع، العمارة...">
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="notes">ملاحظات إضافية للتوصيل (اختياري)</label>
+                                <input type="text" id="notes" placeholder="مثال: يرجى الاتصال قبل الوصول بنصف ساعة">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div class="checkout-box">
+                        <h3>طريقة الدفع</h3>
+                        <div class="payment-methods">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="cod" checked>
+                                <span>الدفع نقداً عند الاستلام (COD)</span>
+                            </label>
+                            <label class="payment-option" onclick="alert('الدفع بالبطاقة البنكية غير متوفر حالياً في هذا النموذج الأولي.'); event.preventDefault();">
+                                <input type="radio" name="payment" value="card">
+                                <span>البطاقة الذهبية / CIB</span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Order Summary Sidebar -->
+                <div class="checkout-summary-wrapper">
+                    <div class="checkout-summary">
+                        <h3>طلبك</h3>
+                        
+                        <div class="checkout-items-list">
+                            <div class="checkout-item">
+                                <div class="checkout-item-name">
+                                    العسل الطبيعي النقي
+                                    <span>الكمية: 1</span>
+                                </div>
+                                <div class="checkout-item-price">0 د.ج</div>
+                            </div>
+                            <div class="checkout-item">
+                                <div class="checkout-item-name">
+                                    خبز ريفي بالخميرة الطبيعية
+                                    <span>الكمية: 2</span>
+                                </div>
+                                <div class="checkout-item-price">0 د.ج</div>
+                            </div>
+                        </div>
+
+                        <div class="summary-row" style="margin-block-start: var(--spacing-md);">
+                            <span>المجموع الفرعي:</span>
+                            <span>0 د.ج</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>تكلفة الشحن (الجزائر العاصمة):</span>
+                            <span>0 د.ج</span>
+                        </div>
+                        
+                        <div class="summary-row total">
+                            <span>الإجمالي:</span>
+                            <span class="price">0 د.ج</span>
+                        </div>
+
+                        <button type="button" class="btn btn-primary" style="width: 100%; margin-block-start: var(--spacing-md);" onclick="document.getElementById('checkoutForm').requestSubmit()">تأكيد الطلب</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="./index.html" class="footer-logo"><img src="./logo.png?v=2" alt="Logo" style="height: 45px;"></a>
+                    <p class="footer-desc">وجهتك الأولى للمنتجات الغذائية الطبيعية والعضوية في الجزائر. نهتم بصحتك من خلال توفير أفضل ما تجود به الطبيعة.</p>
+                    <div class="social-icons" style="display:flex; gap:10px; align-items:center;">
+                        <a href="#" aria-label="انستغرام" style="color:var(--text-gray);"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" aria-label="فيسبوك" style="color:var(--text-gray);"><span class="material-icons-outlined" style="font-size:28px;">facebook</span></a>
+                        <a href="#" aria-label="لينكد إن" style="color:var(--text-gray);"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="./index.html">الرئيسية</a></li>
+                        <li><a href="store.html">المتجر</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>المعلومات القانونية</h4>
+                    <ul>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="terms.html">الشروط والأحكام</a></li>
+                        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>اتصل بنا</h4>
+                    <ul class="footer-contact">
+                        <li><span class="material-icons-outlined">location_on</span> البليدة - الجزائر</li>
+                        <li><span class="material-icons-outlined">phone</span> 0555 123 456</li>
+                        <li><span class="material-icons-outlined">email</span> hello@gidha.dz</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 غذاء (Gidha). جميع الحقوق محفوظة. صُنع بكل حب في الجزائر.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./main.js?v=14"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

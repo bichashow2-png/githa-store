@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسئلة الشائعة - غذاء</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="./index.html" class="logo"><img src="./logo.png?v=2" alt="Logo" style="height: 45px;"></a>
+            <nav class="nav-menu">
+                <a href="./index.html">الرئيسية</a>
+                <a href="store.html">المتجر</a>
+                <a href="bundles.html">الباقات الصحية</a>
+                <a href="blog.html">المدونة</a>
+                <a href="about.html">من نحن</a>
+                <a href="contact.html">تواصل معنا</a>
+            </nav>
+            <div class="header-icons">
+                <a href="#" aria-label="حسابي"><span class="material-icons-outlined">person</span></a>
+                <a href="cart.html" aria-label="سلة التسوق"><span class="material-icons-outlined">shopping_cart</span><span class="cart-badge">2</span></a>
+                <a href="#" class="wallet-icon" aria-label="محفظتي" title="محفظتي"><span class="material-icons-outlined">account_balance_wallet</span></a>
+                <a href="vip.html" aria-label="VIP" title="عضوية VIP"><span class="material-icons-outlined">workspace_premium</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="info-page-header">
+            <div class="container">
+                <h1>الأسئلة الشائعة</h1>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="info-content-layout">
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question">هل منتجاتكم عضوية 100%؟ <span class="material-icons-outlined">expand_more</span></button>
+                        <div class="faq-answer">
+                            <p>نعم، جميع منتجاتنا معتمدة كمنتجات عضوية خالية من المبيدات والأسمدة الكيميائية. نحن نعمل مباشرة مع المزارعين لضمان أعلى معايير الجودة.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <button class="faq-question">ما هي طرق الدفع المتاحة؟ <span class="material-icons-outlined">expand_more</span></button>
+                        <div class="faq-answer">
+                            <p>نوفر حالياً خدمة الدفع نقداً عند الاستلام (COD). ونعمل على إضافة الدفع عبر البطاقة الذهبية والبطاقات البنكية قريباً جداً.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">كم يستغرق توصيل الطلب؟ <span class="material-icons-outlined">expand_more</span></button>
+                        <div class="faq-answer">
+                            <p>في الجزائر العاصمة والولايات المجاورة: 24 - 48 ساعة. باقي الولايات: من 2 إلى 4 أيام عمل.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">هل يمكنني إرجاع المنتج إذا لم يعجبني؟ <span class="material-icons-outlined">expand_more</span></button>
+                        <div class="faq-answer">
+                            <p>بسبب طبيعة المنتجات الغذائية، لا نقبل الإرجاع إلا في حالة استلام منتج تالف أو منتهي الصلاحية. يرجى التواصل معنا خلال 24 ساعة من الاستلام.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="./index.html" class="footer-logo"><img src="./logo.png?v=2" alt="Logo" style="height: 45px;"></a>
+                    <p class="footer-desc">وجهتك الأولى للمنتجات الغذائية الطبيعية والعضوية في الجزائر.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="./index.html">الرئيسية</a></li>
+                        <li><a href="store.html">المتجر</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>المعلومات القانونية</h4>
+                    <ul>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="terms.html">الشروط والأحكام</a></li>
+                        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 غذاء (Gidha). جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./main.js?v=14"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    faqItems.forEach(i => i.classList.remove('active'));
+                    if (!isActive) item.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

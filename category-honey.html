@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العسل والمحليات الطبيعية - غذاء</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="./index.html" class="logo"><img src="./logo.png?v=2" alt="Logo" style="height: 45px;"></a>
+            
+            <nav class="nav-menu">
+                <a href="./index.html">الرئيسية</a>
+                <a href="store.html" class="active">المتجر</a>
+                <a href="./categories.html">التصنيفات</a>
+                <a href="bundles.html">الباقات الصحية</a>
+                <a href="./offers.html">العروض</a>
+                <a href="blog.html">المدونة</a>
+                <a href="about.html">من نحن</a>
+                <a href="contact.html">تواصل معنا</a>
+            </nav>
+
+            <div class="header-icons">
+                <a href="account.html" aria-label="حسابي">
+                    <span class="material-icons-outlined">person</span>
+                </a>
+                <a href="cart.html" aria-label="سلة التسوق">
+                    <span class="material-icons-outlined">shopping_cart</span>
+                    <span class="cart-badge">2</span>
+                </a>
+                <a href="#" class="wallet-icon" aria-label="محفظتي" title="محفظتي"><span class="material-icons-outlined">account_balance_wallet</span></a>
+                <a href="vip.html" aria-label="VIP" title="عضوية VIP"><span class="material-icons-outlined">workspace_premium</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>جميع المنتجات</h1>
+                <p>تصفح تشكيلتنا الواسعة من المنتجات الطبيعية والعضوية الموثوقة</p>
+            </div>
+        </section>
+
+        <!-- Store Layout -->
+        <section class="container store-layout">
+            
+            <!-- Sidebar / Filters -->
+            <aside class="store-sidebar">
+                <div class="filter-widget">
+                    <h4>بحث</h4>
+                    <input type="search" class="search-input" placeholder="ابحث عن منتج...">
+                </div>
+
+                <div class="filter-widget">
+                    <h4>التصنيفات</h4>
+                    <ul class="filter-list">
+                        <li><input type="checkbox" id="cat-1" onclick="window.location.href='category-grains.html'"> <label for="cat-1"><a href="category-grains.html">الحبوب والبقوليات</a></label></li>
+                        <li><input type="checkbox" id="cat-2" onclick="window.location.href='category-nuts.html'"> <label for="cat-2"><a href="category-nuts.html">المكسرات والبذور</a></label></li>
+                        <li><input type="checkbox" id="cat-3" onclick="window.location.href='category-oils.html'"> <label for="cat-3"><a href="category-oils.html">الزيوت والدهون الصحية</a></label></li>
+                        <li><input type="checkbox" id="cat-4" onclick="window.location.href='category-honey.html'"> <label for="cat-4"><a href="category-honey.html">العسل والمحليات الطبيعية</a></label></li>
+                        <li><input type="checkbox" id="cat-5" onclick="window.location.href='category-bakery.html'"> <label for="cat-5"><a href="category-bakery.html">مخبوزات صحية</a></label></li>
+                        <li><input type="checkbox" id="cat-6" onclick="window.location.href='category-water.html'"> <label for="cat-6"><a href="category-water.html">الماء</a></label></li>
+                        <li><input type="checkbox" id="cat-7" onclick="window.location.href='category-pastries.html'"> <label for="cat-7"><a href="category-pastries.html">معجنات</a></label></li>
+                        <li><input type="checkbox" id="cat-8" onclick="window.location.href='category-dairy.html'"> <label for="cat-8"><a href="category-dairy.html">ألبان وأجبان</a></label></li>
+                    </ul>
+                </div>
+
+                <div class="filter-widget">
+                    <h4>السعر</h4>
+                    <ul class="filter-list">
+                        <li><input type="radio" name="price" id="pr-1"> <label for="pr-1">أقل من 0 د.ج</label></li>
+                        <li><input type="radio" name="price" id="pr-2"> <label for="pr-2">1000 - 0 د.ج</label></li>
+                        <li><input type="radio" name="price" id="pr-3"> <label for="pr-3">أكثر من 0 د.ج</label></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Products Area -->
+            <div class="store-main">
+                <div class="store-controls">
+                    <span>عرض 1-6 من أصل 48 منتج</span>
+                    <select class="sort-select" aria-label="ترتيب المنتجات">
+                        <option>الترتيب الافتراضي</option>
+                        <option>الأكثر مبيعاً</option>
+                        <option>السعر: من الأقل للأعلى</option>
+                        <option>السعر: من الأعلى للأقل</option>
+                        <option>أحدث المنتجات</option>
+                    </select>
+                </div>
+
+                <!-- Product Grid -->
+                <div class="products-grid store-grid">
+                    <article class="product-card">
+                        <div class="product-image"><span>[صورة عسل]</span></div>
+                        <div class="product-brand">الشركة أ</div>
+                        <h3 class="product-title"><a href="product-detail.html?id=pure-honey">عسل طبيعي أصلي</a></h3>
+                        <div class="product-stats" style="display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; color: #888; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 4px;">
+                            <div class="rating" style="display: flex; align-items: center; gap: 2px;">
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span style="margin-right: 4px; font-size: 0.8rem;">(0)</span>
+                            </div>
+                            <div class="sales" style="font-size: 0.8rem; background: #f0f0f0; padding: 2px 6px; border-radius: 4px;">
+                                0 مبيعات
+                            </div>
+                        </div>
+                        <div class="product-price">0 د.ج</div>
+                        <button class="btn-cart-icon" onclick="alert('تمت إضافة المنتج للسلة بنجاح')">
+                            <span class="material-icons-outlined">add_shopping_cart</span>
+                        </button>
+                    </article>                    <article class="product-card">
+                        <div class="product-image"><span>[صورة دبس التمر]</span></div>
+                        <div class="product-brand">الشركة ب</div>
+                        <h3 class="product-title"><a href="product-detail.html?id=date-molasses">دبس التمر الخالص</a></h3>
+                        <div class="product-stats" style="display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; color: #888; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 4px;">
+                            <div class="rating" style="display: flex; align-items: center; gap: 2px;">
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span style="margin-right: 4px; font-size: 0.8rem;">(0)</span>
+                            </div>
+                            <div class="sales" style="font-size: 0.8rem; background: #f0f0f0; padding: 2px 6px; border-radius: 4px;">
+                                0 مبيعات
+                            </div>
+                        </div>
+                        <div class="product-price">0 د.ج</div>
+                        <button class="btn-cart-icon" onclick="alert('تمت إضافة المنتج للسلة بنجاح')">
+                            <span class="material-icons-outlined">add_shopping_cart</span>
+                        </button>
+                    </article>                    <article class="product-card">
+                        <div class="product-image"><span>[صورة دبس الرمان]</span></div>
+                        <div class="product-brand">الشركة ج</div>
+                        <h3 class="product-title"><a href="product-detail.html?id=pomegranate-molasses">دبس الرمان الطبيعي</a></h3>
+                        <div class="product-stats" style="display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; color: #888; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 4px;">
+                            <div class="rating" style="display: flex; align-items: center; gap: 2px;">
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span style="margin-right: 4px; font-size: 0.8rem;">(0)</span>
+                            </div>
+                            <div class="sales" style="font-size: 0.8rem; background: #f0f0f0; padding: 2px 6px; border-radius: 4px;">
+                                0 مبيعات
+                            </div>
+                        </div>
+                        <div class="product-price">0 د.ج</div>
+                        <button class="btn-cart-icon" onclick="alert('تمت إضافة المنتج للسلة بنجاح')">
+                            <span class="material-icons-outlined">add_shopping_cart</span>
+                        </button>
+                    </article>                    <article class="product-card">
+                        <div class="product-image"><span>[صورة سكر التمر]</span></div>
+                        <div class="product-brand">الشركة د</div>
+                        <h3 class="product-title"><a href="product-detail.html?id=date-sugar">سكر التمر البديل الصحي</a></h3>
+                        <div class="product-stats" style="display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; color: #888; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 4px;">
+                            <div class="rating" style="display: flex; align-items: center; gap: 2px;">
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span style="margin-right: 4px; font-size: 0.8rem;">(0)</span>
+                            </div>
+                            <div class="sales" style="font-size: 0.8rem; background: #f0f0f0; padding: 2px 6px; border-radius: 4px;">
+                                0 مبيعات
+                            </div>
+                        </div>
+                        <div class="product-price">0 د.ج</div>
+                        <button class="btn-cart-icon" onclick="alert('تمت إضافة المنتج للسلة بنجاح')">
+                            <span class="material-icons-outlined">add_shopping_cart</span>
+                        </button>
+                    </article>
+                </div>
+                <!-- Pagination -->
+                <div class="pagination">
+                    <a href="#" class="page-btn"><span class="material-icons-outlined">chevron_right</span></a>
+                    <a href="#" class="page-btn active">1</a>
+                    <a href="#" class="page-btn">2</a>
+                    <a href="#" class="page-btn">3</a>
+                    <a href="#" class="page-btn">...</a>
+                    <a href="#" class="page-btn">8</a>
+                    <a href="#" class="page-btn"><span class="material-icons-outlined">chevron_left</span></a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="./index.html" class="footer-logo"><img src="./logo.png?v=2" alt="Logo" style="height: 45px;"></a>
+                    <p class="footer-desc">وجهتك الأولى للمنتجات الغذائية الطبيعية والعضوية في الجزائر. نهتم بصحتك من خلال توفير أفضل ما تجود به الطبيعة.</p>
+                    <div class="social-icons" style="display:flex; gap:10px; align-items:center;">
+                        <a href="#" aria-label="انستغرام" style="color:var(--text-gray);"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" aria-label="فيسبوك" style="color:var(--text-gray);"><span class="material-icons-outlined" style="font-size:28px;">facebook</span></a>
+                        <a href="#" aria-label="لينكد إن" style="color:var(--text-gray);"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="./index.html">الرئيسية</a></li>
+                        <li><a href="store.html">المتجر</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>المعلومات القانونية</h4>
+                    <ul>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="terms.html">الشروط والأحكام</a></li>
+                        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>اتصل بنا</h4>
+                    <ul class="footer-contact">
+                        <li><span class="material-icons-outlined">location_on</span> البليدة - الجزائر</li>
+                        <li><span class="material-icons-outlined">phone</span> 0555 123 456</li>
+                        <li><span class="material-icons-outlined">email</span> hello@gidha.dz</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 غذاء (Gidha). جميع الحقوق محفوظة. صُنع بكل حب في الجزائر.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./main.js?v=14"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

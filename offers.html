@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العروض - غذاء</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="./index.html" class="logo">
+                <img src="./logo.png?v=2" alt="غذاء" style="height: 45px;">
+            </a>
+            
+            <button class="mobile-menu-btn" aria-label="القائمة">
+                <span class="material-icons">menu</span>
+            </button>
+            
+            <nav class="nav-menu">
+                <a href="./index.html">الرئيسية</a>
+                <a href="./store.html">المتجر</a>
+                <a href="./categories.html">التصنيفات</a>
+                <a href="./bundles.html">الباقات الصحية</a>
+                <a href="./offers.html" class="active">العروض</a>
+                <a href="./blog.html">المدونة</a>
+                <a href="./about.html">من نحن</a>
+                <a href="./contact.html">تواصل معنا</a>
+            </nav>
+
+            <div class="header-icons">
+                <a href="account.html" aria-label="حسابي">
+                    <span class="material-icons-outlined">person</span>
+                </a>
+                <a href="./cart.html" aria-label="سلة التسوق">
+                    <span class="material-icons-outlined">shopping_cart</span>
+                    <span class="cart-badge">2</span>
+                </a>
+                <a href="#" class="wallet-icon" aria-label="محفظتي" title="محفظتي"><span class="material-icons-outlined">account_balance_wallet</span></a>
+                <a href="vip.html" aria-label="VIP" title="عضوية VIP"><span class="material-icons-outlined">workspace_premium</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="offers-page-header">
+            <div class="container">
+                <h1>عروض حصرية لفترة محدودة! 🔥</h1>
+                <p>اغتنم الفرصة وتسوق أفضل المنتجات العضوية والطبيعية بتخفيضات لا تفوّت.</p>
+                
+                <div class="countdown-banner">
+                    <h3>ينتهي العرض خلال:</h3>
+                    <div class="countdown-timer">
+                        <div class="time-box">
+                            02<span>أيام</span>
+                        </div>
+                        <div class="time-box">
+                            14<span>ساعات</span>
+                        </div>
+                        <div class="time-box">
+                            35<span>دقائق</span>
+                        </div>
+                        <div class="time-box">
+                            00<span>ثواني</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Offers Grid -->
+        <section class="products-section" style="background-color: var(--background-color);">
+            <div class="container">
+                <div class="products-grid">
+                    
+                    <!-- Offer Product 1 -->
+                    <article class="product-card">
+                        <span class="badge badge-discount">-20%</span>
+                        <div class="product-image">
+                            <span>[صورة العسل]</span>
+                        </div>
+                        <div class="product-brand">العلامة أ</div>
+                        <h3 class="product-title"><a href="./product-detail.html">العسل الطبيعي النقي</a></h3>
+                        <div class="product-stats" style="display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; color: #888; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 4px;">
+                            <div class="rating" style="display: flex; align-items: center; gap: 2px;">
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span style="margin-right: 4px; font-size: 0.8rem;">(0)</span>
+                            </div>
+                            <div class="sales" style="font-size: 0.8rem; background: #f0f0f0; padding: 2px 6px; border-radius: 4px;">
+                                0 مبيعات
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-old">0 د.ج</span>
+                            <span class="price-new">0 د.ج</span>
+                        </div>
+                        <button class="btn-cart-icon" onclick="alert('تمت إضافة المنتج للسلة بنجاح')">
+                            <span class="material-icons-outlined">add_shopping_cart</span>
+                        </button>
+                    </article>
+
+                    <!-- Offer Product 2 -->
+                    <article class="product-card">
+                        <span class="badge badge-discount">-15%</span>
+                        <div class="product-image">
+                            <span>[صورة زيت الزيتون]</span>
+                        </div>
+                        <div class="product-brand">العلامة ب</div>
+                        <h3 class="product-title"><a href="./product-detail.html">زيت زيتون بكر ممتاز</a></h3>
+                        <div class="product-stats" style="display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; color: #888; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 4px;">
+                            <div class="rating" style="display: flex; align-items: center; gap: 2px;">
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span style="margin-right: 4px; font-size: 0.8rem;">(0)</span>
+                            </div>
+                            <div class="sales" style="font-size: 0.8rem; background: #f0f0f0; padding: 2px 6px; border-radius: 4px;">
+                                0 مبيعات
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-old">0 د.ج</span>
+                            <span class="price-new">0 د.ج</span>
+                        </div>
+                        <button class="btn-cart-icon" onclick="alert('تمت إضافة المنتج للسلة بنجاح')">
+                            <span class="material-icons-outlined">add_shopping_cart</span>
+                        </button>
+                    </article>
+
+                    <!-- Offer Product 3 -->
+                    <article class="product-card">
+                        <span class="badge badge-discount">-30%</span>
+                        <div class="product-image">
+                            <span>[صورة زبدة الفول السوداني]</span>
+                        </div>
+                        <div class="product-brand">العلامة ت</div>
+                        <h3 class="product-title"><a href="./product-detail.html">زبدة فول سوداني عضوية</a></h3>
+                        <div class="product-stats" style="display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; color: #888; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 4px;">
+                            <div class="rating" style="display: flex; align-items: center; gap: 2px;">
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span style="margin-right: 4px; font-size: 0.8rem;">(0)</span>
+                            </div>
+                            <div class="sales" style="font-size: 0.8rem; background: #f0f0f0; padding: 2px 6px; border-radius: 4px;">
+                                0 مبيعات
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-old">0 د.ج</span>
+                            <span class="price-new">0 د.ج</span>
+                        </div>
+                        <button class="btn-cart-icon" onclick="alert('تمت إضافة المنتج للسلة بنجاح')">
+                            <span class="material-icons-outlined">add_shopping_cart</span>
+                        </button>
+                    </article>
+
+                    <!-- Offer Product 4 -->
+                    <article class="product-card">
+                        <span class="badge badge-discount">-10%</span>
+                        <div class="product-image">
+                            <span>[صورة شوفان]</span>
+                        </div>
+                        <div class="product-brand">العلامة ث</div>
+                        <h3 class="product-title"><a href="./product-detail.html">شوفان كامل الحبة</a></h3>
+                        <div class="product-stats" style="display: flex; align-items: center; justify-content: space-between; font-size: 0.85rem; color: #888; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 4px;">
+                            <div class="rating" style="display: flex; align-items: center; gap: 2px;">
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span class="material-icons-outlined" style="font-size: 1rem; color: #ccc;">star_border</span>
+                                <span style="margin-right: 4px; font-size: 0.8rem;">(0)</span>
+                            </div>
+                            <div class="sales" style="font-size: 0.8rem; background: #f0f0f0; padding: 2px 6px; border-radius: 4px;">
+                                0 مبيعات
+                            </div>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-old">0 د.ج</span>
+                            <span class="price-new">0 د.ج</span>
+                        </div>
+                        <button class="btn-cart-icon" onclick="alert('تمت إضافة المنتج للسلة بنجاح')">
+                            <span class="material-icons-outlined">add_shopping_cart</span>
+                        </button>
+                    </article>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- (Footer content same as store.html) -->
+                <div class="footer-col">
+                    <a href="./index.html" class="footer-logo"><img src="./logo.png?v=2" alt="Logo" style="height: 45px;"></a>
+                    <p>وجهتك الأولى للمنتجات الطبيعية والعضوية. نلتزم بتقديم أفضل جودة لحياة صحية ومتوازنة.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="./index.html">الرئيسية</a></li>
+                        <li><a href="./store.html">المتجر</a></li>
+                        <li><a href="./offers.html">العروض</a></li>
+                        <li><a href="./about.html">من نحن</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>خدمة العملاء</h4>
+                    <ul>
+                        <li><a href="./contact.html">تواصل معنا</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                        <li><a href="#">سياسة الاسترجاع</a></li>
+                        <li><a href="#">الشحن والتوصيل</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل معنا</h4>
+                    <ul>
+                        <li><span class="material-icons-outlined">location_on</span> الجزائر، الجزائر</li>
+                        <li><span class="material-icons-outlined">phone</span> +213 123 456 789</li>
+                        <li><span class="material-icons-outlined">email</span> info@gidha.dz</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 متجر غذاء. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="./main.js?v=14"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

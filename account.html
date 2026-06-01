@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حسابي - غذاء</title>
+    <link rel="stylesheet" href="./style.css?v=13">
+    <style>
+        .account-page {
+            background-color: var(--bg-beige);
+            padding: 3rem 0;
+            min-height: 60vh;
+        }
+        .account-container {
+            display: flex;
+            gap: 2rem;
+        }
+        .account-sidebar {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid var(--border-color);
+            width: 280px;
+            flex-shrink: 0;
+            align-self: flex-start;
+        }
+        .account-content {
+            flex-grow: 1;
+            min-width: 0;
+        }
+        .account-tab {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            border: none;
+            background: transparent;
+            text-align: right;
+            width: 100%;
+            cursor: pointer;
+            border-radius: 8px;
+            color: var(--text-dark);
+            transition: 0.3s;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .account-tab:hover {
+            background: var(--light-green);
+            color: var(--primary-green);
+        }
+        .account-tab.active {
+            background: var(--primary-green);
+            color: white;
+        }
+        .account-tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        .account-tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+            .account-container {
+                flex-direction: column;
+            }
+            .account-sidebar {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="./index.html" class="logo"><img src="./logo.png?v=2" alt="Logo" style="height: 45px;"></a>
+            
+            <nav class="nav-menu">
+                <a href="./index.html">الرئيسية</a>
+                <a href="store.html">المتجر</a>
+                <a href="./categories.html">التصنيفات</a>
+                <a href="bundles.html">الباقات الصحية</a>
+                <a href="./offers.html">العروض</a>
+                <a href="blog.html">المدونة</a>
+                <a href="about.html">من نحن</a>
+                <a href="contact.html">تواصل معنا</a>
+            </nav>
+
+            <div class="header-icons">
+                <a href="account.html" class="active" aria-label="حسابي">
+                    <span class="material-icons-outlined">person</span>
+                </a>
+                <a href="cart.html" aria-label="سلة التسوق">
+                    <span class="material-icons-outlined">shopping_cart</span>
+                    <span class="cart-badge">2</span>
+                </a>
+                <a href="#" class="wallet-icon" aria-label="محفظتي" title="محفظتي"><span class="material-icons-outlined">account_balance_wallet</span></a>
+                <a href="vip.html" aria-label="VIP" title="عضوية VIP"><span class="material-icons-outlined">workspace_premium</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="account-page">
+        <div class="container account-container">
+            <!-- Sidebar -->
+            <aside class="account-sidebar">
+                <div class="user-info" style="text-align: center; margin-bottom: 2rem;">
+                    <div class="user-avatar" style="width: 80px; height: 80px; background: var(--light-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--primary-green);">
+                        <span class="material-icons-outlined" style="font-size: 40px;">person</span>
+                    </div>
+                    <h3 style="margin-bottom: 0.5rem; color: var(--text-dark);">أحمد الجزائري</h3>
+                    <p style="color: var(--text-gray); font-size: 0.9rem;">ahmed@example.com</p>
+                </div>
+                <nav class="account-nav" style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <button class="account-tab active" data-tab="dashboard"><span class="material-icons-outlined">dashboard</span> لوحة التحكم</button>
+                    <button class="account-tab" data-tab="orders"><span class="material-icons-outlined">shopping_bag</span> طلباتي</button>
+                    <button class="account-tab" data-tab="addresses"><span class="material-icons-outlined">location_on</span> عناويني</button>
+                    <button class="account-tab" data-tab="settings"><span class="material-icons-outlined">settings</span> إعدادات الحساب</button>
+                    <button style="display: flex; align-items: center; gap: 10px; padding: 12px 15px; border: none; background: transparent; text-align: right; width: 100%; cursor: pointer; border-radius: 8px; color: #dc3545; transition: 0.3s; font-family: inherit; font-size: 1rem; font-weight: 500; margin-top: 1rem;" onclick="window.location.href='../index.html'"><span class="material-icons-outlined">logout</span> تسجيل الخروج</button>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="account-content">
+                <!-- Dashboard Tab -->
+                <div id="tab-dashboard" class="account-tab-content active">
+                    <h2 style="margin-bottom: 1.5rem; color: var(--text-dark);">مرحباً، أحمد</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                        <div style="background: white; border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 12px; display: flex; align-items: center; gap: 1rem;">
+                            <div style="background: var(--light-green); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary-green);">
+                                <span class="material-icons-outlined">shopping_bag</span>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 0.3rem;">إجمالي الطلبات</h4>
+                                <div style="font-size: 1.5rem; font-weight: bold; color: var(--text-dark);">12</div>
+                            </div>
+                        </div>
+                        <div style="background: white; border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 12px; display: flex; align-items: center; gap: 1rem;">
+                            <div style="background: rgba(255,193,7,0.1); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ffc107;">
+                                <span class="material-icons-outlined">account_balance_wallet</span>
+                            </div>
+                            <div>
+                                <h4 style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 0.3rem;">رصيد المحفظة</h4>
+                                <div style="font-size: 1.5rem; font-weight: bold; color: var(--text-dark);" id="account-wallet-balance">0 د.ج</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Recent Orders Preview -->
+                    <div style="background: white; border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden;">
+                        <div style="padding: 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center;">
+                            <h3 style="margin: 0; color: var(--text-dark);">أحدث الطلبات</h3>
+                            <a href="#" onclick="document.querySelector('[data-tab=\'orders\']').click(); return false;" style="color: var(--primary-green); text-decoration: none; font-size: 0.9rem; font-weight: 500;">عرض الكل</a>
+                        </div>
+                        <div style="padding: 1.5rem; overflow-x: auto;">
+                            <table style="width: 100%; border-collapse: collapse; text-align: right; min-width: 400px;">
+                                <thead>
+                                    <tr style="color: var(--text-gray); border-bottom: 1px solid var(--border-color);">
+                                        <th style="padding-bottom: 0.5rem; font-weight: normal;">رقم الطلب</th>
+                                        <th style="padding-bottom: 0.5rem; font-weight: normal;">التاريخ</th>
+                                        <th style="padding-bottom: 0.5rem; font-weight: normal;">الحالة</th>
+                                        <th style="padding-bottom: 0.5rem; font-weight: normal;">الإجمالي</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td style="padding: 1rem 0; color: var(--text-dark);">#ORD-9432</td>
+                                        <td style="padding: 1rem 0; color: var(--text-gray);">15 مايو 2026</td>
+                                        <td style="padding: 1rem 0;"><span style="background: var(--light-green); color: var(--primary-green); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">مكتمل</span></td>
+                                        <td style="padding: 1rem 0; font-weight: bold; color: var(--primary-green);">0 د.ج</td>
+                                    </tr>
+                                    <tr style="border-top: 1px solid var(--border-color);">
+                                        <td style="padding: 1rem 0; color: var(--text-dark);">#ORD-9210</td>
+                                        <td style="padding: 1rem 0; color: var(--text-gray);">2 مايو 2026</td>
+                                        <td style="padding: 1rem 0;"><span style="background: var(--light-green); color: var(--primary-green); padding: 4px 8px; border-radius: 4px; font-size: 0.8rem;">مكتمل</span></td>
+                                        <td style="padding: 1rem 0; font-weight: bold; color: var(--primary-green);">0 د.ج</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orders Tab -->
+                <div id="tab-orders" class="account-tab-content">
+                    <h2 style="margin-bottom: 1.5rem; color: var(--text-dark);">طلباتي</h2>
+                    <div style="background: white; border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem;">
+                        <p style="color: var(--text-gray); text-align: center; padding: 2rem 0;">باقي طلباتك السابقة ستظهر هنا.</p>
+                    </div>
+                </div>
+
+                <!-- Addresses Tab -->
+                <div id="tab-addresses" class="account-tab-content">
+                    <h2 style="margin-bottom: 1.5rem; color: var(--text-dark);">عناويني</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div style="background: white; border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 12px; position: relative;">
+                            <span style="position: absolute; top: 1.5rem; left: 1.5rem; background: var(--light-green); color: var(--primary-green); font-size: 0.8rem; padding: 2px 6px; border-radius: 4px;">الأساسي</span>
+                            <h4 style="margin-bottom: 1rem; color: var(--text-dark);">المنزل</h4>
+                            <p style="color: var(--text-gray); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
+                                أحمد الجزائري<br>
+                                حي الزهور، العمارة 12، الطابق 3<br>
+                                البليدة، الجزائر<br>
+                                0555 123 456
+                            </p>
+                            <div style="display: flex; gap: 10px;">
+                                <button style="border: none; background: transparent; color: var(--primary-green); cursor: pointer; font-size: 0.9rem; font-family: inherit;">تعديل</button>
+                                <button style="border: none; background: transparent; color: #dc3545; cursor: pointer; font-size: 0.9rem; font-family: inherit;">حذف</button>
+                            </div>
+                        </div>
+                        <div style="background: transparent; border: 2px dashed var(--border-color); padding: 1.5rem; border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-direction: column; cursor: pointer; color: var(--text-gray); transition: 0.3s;" onmouseover="this.style.borderColor='var(--primary-green)'; this.style.color='var(--primary-green)';" onmouseout="this.style.borderColor='var(--border-color)'; this.style.color='var(--text-gray)';">
+                            <span class="material-icons-outlined" style="font-size: 2rem; margin-bottom: 0.5rem;">add_circle_outline</span>
+                            <span style="font-family: inherit;">إضافة عنوان جديد</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Settings Tab -->
+                <div id="tab-settings" class="account-tab-content">
+                    <h2 style="margin-bottom: 1.5rem; color: var(--text-dark);">إعدادات الحساب</h2>
+                    <div style="background: white; border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem;">
+                        <form style="display: flex; flex-direction: column; gap: 1rem; max-width: 500px;" onsubmit="event.preventDefault(); alert('تم حفظ التعديلات بنجاح!');">
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-dark);">الاسم الكامل</label>
+                                <input type="text" class="form-input" value="أحمد الجزائري" style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 8px; font-family: inherit; color: var(--text-dark);">
+                            </div>
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-dark);">البريد الإلكتروني</label>
+                                <input type="email" class="form-input" value="ahmed@example.com" style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 8px; font-family: inherit; color: var(--text-dark);">
+                            </div>
+                            <div class="form-group">
+                                <label style="display: block; margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-dark);">رقم الهاتف</label>
+                                <input type="tel" class="form-input" value="0555 123 456" style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 8px; font-family: inherit; color: var(--text-dark);">
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="align-self: flex-start; margin-top: 1rem;">حفظ التغييرات</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="./index.html" class="footer-logo"><img src="./logo.png?v=2" alt="Logo" style="height: 45px;"></a>
+                    <p class="footer-desc">وجهتك الأولى للمنتجات الغذائية الطبيعية والعضوية في الجزائر. نهتم بصحتك من خلال توفير أفضل ما تجود به الطبيعة.</p>
+                    <div class="social-icons" style="display:flex; gap:10px; align-items:center;">
+                        <a href="#" aria-label="انستغرام" style="color:var(--text-gray);"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" aria-label="فيسبوك" style="color:var(--text-gray);"><span class="material-icons-outlined" style="font-size:28px;">facebook</span></a>
+                        <a href="#" aria-label="لينكد إن" style="color:var(--text-gray);"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="./index.html">الرئيسية</a></li>
+                        <li><a href="store.html">المتجر</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>المعلومات القانونية</h4>
+                    <ul>
+                        <li><a href="privacy.html">سياسة الخصوصية</a></li>
+                        <li><a href="terms.html">الشروط والأحكام</a></li>
+                        <li><a href="faq.html">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>اتصل بنا</h4>
+                    <ul class="footer-contact">
+                        <li><span class="material-icons-outlined">location_on</span> البليدة - الجزائر</li>
+                        <li><span class="material-icons-outlined">phone</span> 0555 123 456</li>
+                        <li><span class="material-icons-outlined">email</span> hello@gidha.dz</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 غذاء (Gidha). جميع الحقوق محفوظة. صُنع بكل حب في الجزائر.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./products.js"></script>
+    <script src="./main.js?v=14"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Tabs logic
+            const tabs = document.querySelectorAll('.account-tab');
+            const contents = document.querySelectorAll('.account-tab-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    if (tab.getAttribute('data-tab')) {
+                        tabs.forEach(t => t.classList.remove('active'));
+                        contents.forEach(c => c.classList.remove('active'));
+                        
+                        tab.classList.add('active');
+                        document.getElementById('tab-' + tab.getAttribute('data-tab')).classList.add('active');
+                    }
+                });
+            });
+
+            // Set Wallet Balance dynamically from window.wallet if it exists
+            setTimeout(() => {
+                if(window.wallet && window.wallet.balance !== undefined) {
+                    const balanceEl = document.getElementById('account-wallet-balance');
+                    if(balanceEl) {
+                        balanceEl.textContent = `${window.wallet.balance} د.ج`;
+                    }
+                }
+            }, 500);
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
