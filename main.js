@@ -163,106 +163,106 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 6. Dynamic Placeholder Replacer | استبدال الصور المؤقتة بصور حقيقية
     const initPlaceholders = () => {
-        const isNested = window.location.pathname.includes('/pages/') || window.location.pathname.includes('\\pages\\');
+        const isNested = window.location.pathname.includes('./') || window.location.pathname.includes('\\pages\\');
         const prefix = isNested ? '../' : './';
         
         const localProductsData = {
-            "almond-butter": { title: "زبدة اللوز", img: "assets/images/almond_butter.jpg" },
-            "pistachio-butter": { title: "زبدة الفستق", img: "assets/images/pistachio_butter.jpg" },
-            "tahini": { title: "الطحينة (سمسم)", img: "assets/images/tahini.jpg" },
-            "hazelnut-butter": { title: "زبدة البندق", img: "assets/images/hazelnut_butter.jpg" },
-            "cashew-butter": { title: "زبدة الكاجو", img: "assets/images/cashew_butter.png" },
+            "almond-butter": { title: "زبدة اللوز", img: "./almond_butter.jpg" },
+            "pistachio-butter": { title: "زبدة الفستق", img: "./pistachio_butter.jpg" },
+            "tahini": { title: "الطحينة (سمسم)", img: "./tahini.jpg" },
+            "hazelnut-butter": { title: "زبدة البندق", img: "./hazelnut_butter.jpg" },
+            "cashew-butter": { title: "زبدة الكاجو", img: "./cashew_butter.png" },
             "raw-almonds": { title: "لوز طبيعي نيء", img: "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=600&q=80" },
-            "walnuts": { title: "جوز (عين الجمل)", img: "assets/images/walnuts_macro.png" },
-            "premium-cashews": { title: "كاجو فاخر", img: "assets/images/premium_cashews.png" },
-            "bulgur": { title: "برغل خشن طبيعي", img: "assets/images/bulgur.jpg" },
-            "brown-rice": { title: "أرز أسمر كامل", img: "assets/images/brown_rice.jpg" },
-            "oats": { title: "شوفان عضوي", img: "assets/images/oats.jpg" },
-            "quinoa": { title: "كينوا بيضاء", img: "assets/images/quinoa.jpg?v=3" },
-            "black-rice": { title: "أرز أسود بري", img: "assets/images/black_rice.jpg" },
-            "rose-water": { title: "ماء الورد الطبيعي", img: "assets/images/rose_water.jpg" },
-            "orange-blossom-water": { title: "ماء الزهر المقطر", img: "assets/images/orange_blossom_water.png" },
-            "thyme-water": { title: "ماء الزعتر الصافي", img: "assets/images/thyme_water.png" },
-            "frankincense-water": { title: "ماء اللبان العضوي", img: "assets/images/frankincense_water.png" },
-            "coconut-water": { title: "ماء جوز الهند العضوي", img: "assets/images/coconut_water.png" },
-            "olive-oil": { title: "زيت زيتون بكر ممتاز", img: "assets/images/olive_oil.jpg" },
-            "sesame-oil": { title: "زيت سمسم طبيعي", img: "assets/images/sesame_oil.png" },
-            "coconut-oil": { title: "زيت جوز الهند العضوي", img: "assets/images/coconut_oil.png" },
-            "butter": { title: "زبدة طبيعية نقية", img: "assets/images/pure_butter.png" },
-            "animal-ghee": { title: "سمن حيواني", img: "assets/images/animal_ghee.png" },
-            "pure-honey": { title: "عسل طبيعي أصلي", img: "assets/images/honey.jpg" },
-            "date-molasses": { title: "دبس التمر الخالص", img: "assets/images/date_molasses.png" },
-            "pomegranate-molasses": { title: "دبس الرمان الطبيعي", img: "assets/images/pomegranate_molasses.png" },
-            "date-sugar": { title: "سكر التمر البديل الصحي", img: "assets/images/date_sugar.png" },
+            "walnuts": { title: "جوز (عين الجمل)", img: "./walnuts_macro.png" },
+            "premium-cashews": { title: "كاجو فاخر", img: "./premium_cashews.png" },
+            "bulgur": { title: "برغل خشن طبيعي", img: "./bulgur.jpg" },
+            "brown-rice": { title: "أرز أسمر كامل", img: "./brown_rice.jpg" },
+            "oats": { title: "شوفان عضوي", img: "./oats.jpg" },
+            "quinoa": { title: "كينوا بيضاء", img: "./quinoa.jpg?v=3" },
+            "black-rice": { title: "أرز أسود بري", img: "./black_rice.jpg" },
+            "rose-water": { title: "ماء الورد الطبيعي", img: "./rose_water.jpg" },
+            "orange-blossom-water": { title: "ماء الزهر المقطر", img: "./orange_blossom_water.png" },
+            "thyme-water": { title: "ماء الزعتر الصافي", img: "./thyme_water.png" },
+            "frankincense-water": { title: "ماء اللبان العضوي", img: "./frankincense_water.png" },
+            "coconut-water": { title: "ماء جوز الهند العضوي", img: "./coconut_water.png" },
+            "olive-oil": { title: "زيت زيتون بكر ممتاز", img: "./olive_oil.jpg" },
+            "sesame-oil": { title: "زيت سمسم طبيعي", img: "./sesame_oil.png" },
+            "coconut-oil": { title: "زيت جوز الهند العضوي", img: "./coconut_oil.png" },
+            "butter": { title: "زبدة طبيعية نقية", img: "./pure_butter.png" },
+            "animal-ghee": { title: "سمن حيواني", img: "./animal_ghee.png" },
+            "pure-honey": { title: "عسل طبيعي أصلي", img: "./honey.jpg" },
+            "date-molasses": { title: "دبس التمر الخالص", img: "./date_molasses.png" },
+            "pomegranate-molasses": { title: "دبس الرمان الطبيعي", img: "./pomegranate_molasses.png" },
+            "date-sugar": { title: "سكر التمر البديل الصحي", img: "./date_sugar.png" },
             "barley-bread": { title: "خبز الشعير الصحي", img: "https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" },
-            "sourdough-bread": { title: "خبز بالخميرة الطبيعية", img: "assets/images/sourdough_bread.jpg" },
-            "barley-couscous": { title: "كسكس الشعير", img: "assets/images/couscous.jpg" },
-            "acorn-couscous": { title: "كسكس البلوط", img: "assets/images/acorn_couscous.png" },
-            "carob-couscous": { title: "كسكس الخروب", img: "assets/images/carob_couscous.png" },
-            "whole-wheat-spaghetti": { title: "سباغيتي قمح الكامل", img: "assets/images/whole_wheat_spaghetti.png" },
-            "whole-wheat-rechta": { title: "رشتة القمح الكامل", img: "assets/images/whole_wheat_rechta.png" },
-            "white-cheese": { title: "جبن أبيض طبيعي", img: "assets/images/white_cheese.jpg" },
-            "greek-yogurt": { title: "زبادي يوناني أصلي", img: "assets/images/greek_yogurt.png" },
-            "edam-cheese": { title: "جبن إيدام معتق", img: "assets/images/edam_cheese.png" },
-            "coconut-milk": { title: "حليب جوز الهند", img: "assets/images/coconut_milk.png" },
-            "default": { title: "منتج طبيعي", img: "assets/images/hero.jpg" }
+            "sourdough-bread": { title: "خبز بالخميرة الطبيعية", img: "./sourdough_bread.jpg" },
+            "barley-couscous": { title: "كسكس الشعير", img: "./couscous.jpg" },
+            "acorn-couscous": { title: "كسكس البلوط", img: "./acorn_couscous.png" },
+            "carob-couscous": { title: "كسكس الخروب", img: "./carob_couscous.png" },
+            "whole-wheat-spaghetti": { title: "سباغيتي قمح الكامل", img: "./whole_wheat_spaghetti.png" },
+            "whole-wheat-rechta": { title: "رشتة القمح الكامل", img: "./whole_wheat_rechta.png" },
+            "white-cheese": { title: "جبن أبيض طبيعي", img: "./white_cheese.jpg" },
+            "greek-yogurt": { title: "زبادي يوناني أصلي", img: "./greek_yogurt.png" },
+            "edam-cheese": { title: "جبن إيدام معتق", img: "./edam_cheese.png" },
+            "coconut-milk": { title: "حليب جوز الهند", img: "./coconut_milk.png" },
+            "default": { title: "منتج طبيعي", img: "./hero.jpg" }
         };
 
         const imageMap = {
-            'زبدة اللوز': 'assets/images/almond_butter.jpg',
-            'زبدة الفستق': 'assets/images/pistachio_butter.jpg',
-            'زبدة البندق': 'assets/images/hazelnut_butter.jpg',
-            'زبدة الكاجو': 'assets/images/cashew_butter.png',
-            'زبدة الفول': 'assets/images/peanut_butter.png',
-            'زبدة طبيعية': 'assets/images/pure_butter.png',
-            'زبدة': 'assets/images/almond_butter.jpg',
-            'طحينة': 'assets/images/tahini.jpg',
+            'زبدة اللوز': './almond_butter.jpg',
+            'زبدة الفستق': './pistachio_butter.jpg',
+            'زبدة البندق': './hazelnut_butter.jpg',
+            'زبدة الكاجو': './cashew_butter.png',
+            'زبدة الفول': './peanut_butter.png',
+            'زبدة طبيعية': './pure_butter.png',
+            'زبدة': './almond_butter.jpg',
+            'طحينة': './tahini.jpg',
             'لوز': 'https://images.unsplash.com/photo-1508061253366-f7da158b6d46?auto=format&fit=crop&w=600&q=80',
-            'جوز': 'assets/images/walnuts_macro.png',
-            'كاجو': 'assets/images/premium_cashews.png',
-            'برغل': 'assets/images/bulgur.jpg',
-            'أرز أسمر': 'assets/images/brown_rice.jpg',
-            'أرز أسود': 'assets/images/black_rice.jpg',
-            'شوفان': 'assets/images/oats.jpg',
-            'كينوا': 'assets/images/quinoa.jpg?v=3',
-            'ماء الورد': 'assets/images/rose_water.jpg',
-            'ماء الزهر': 'assets/images/orange_blossom_water.png',
-            'ماء اللبان': 'assets/images/frankincense_water.png',
-            'ماء جوز الهند': 'assets/images/coconut_water.png',
-            'ماء الزعتر': 'assets/images/thyme_water.png',
-            'ماء': 'assets/images/rose_water.jpg',
-            'زيت زيتون': 'assets/images/olive_oil.jpg',
-            'زيت سمسم': 'assets/images/sesame_oil.png',
-            'زيت جوز الهند': 'assets/images/coconut_oil.png',
-            'زيت': 'assets/images/olive_oil.jpg',
-            'سمن': 'assets/images/animal_ghee.png',
-            'عسل': 'assets/images/honey.jpg',
-            'دبس التمر': 'assets/images/date_molasses.png',
-            'دبس الرمان': 'assets/images/pomegranate_molasses.png',
-            'سكر التمر': 'assets/images/date_sugar.png',
+            'جوز': './walnuts_macro.png',
+            'كاجو': './premium_cashews.png',
+            'برغل': './bulgur.jpg',
+            'أرز أسمر': './brown_rice.jpg',
+            'أرز أسود': './black_rice.jpg',
+            'شوفان': './oats.jpg',
+            'كينوا': './quinoa.jpg?v=3',
+            'ماء الورد': './rose_water.jpg',
+            'ماء الزهر': './orange_blossom_water.png',
+            'ماء اللبان': './frankincense_water.png',
+            'ماء جوز الهند': './coconut_water.png',
+            'ماء الزعتر': './thyme_water.png',
+            'ماء': './rose_water.jpg',
+            'زيت زيتون': './olive_oil.jpg',
+            'زيت سمسم': './sesame_oil.png',
+            'زيت جوز الهند': './coconut_oil.png',
+            'زيت': './olive_oil.jpg',
+            'سمن': './animal_ghee.png',
+            'عسل': './honey.jpg',
+            'دبس التمر': './date_molasses.png',
+            'دبس الرمان': './pomegranate_molasses.png',
+            'سكر التمر': './date_sugar.png',
             'خبز الشعير': 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80',
-            'خبز ريفي': 'assets/images/sourdough_bread.jpg',
-            'خبز': 'assets/images/sourdough_bread.jpg',
-            'كسكس الشعير': 'assets/images/couscous.jpg',
-            'كسكس البلوط': 'assets/images/acorn_couscous.png',
-            'كسكس الخروب': 'assets/images/carob_couscous.png',
-            'كسكس': 'assets/images/couscous.jpg',
-            'سباغيتي': 'assets/images/whole_wheat_spaghetti.png',
-            'رشتة': 'assets/images/whole_wheat_rechta.png',
-            'معجنات': 'assets/images/couscous.jpg',
-            'جبن أبيض': 'assets/images/white_cheese.jpg',
-            'جبن إيدام': 'assets/images/edam_cheese.png',
-            'جبن ايدام': 'assets/images/edam_cheese.png',
-            'جبن': 'assets/images/white_cheese.jpg',
-            'زبادي': 'assets/images/greek_yogurt.png',
-            'حليب جوز الهند': 'assets/images/coconut_milk.png',
-            'حليب': 'assets/images/coconut_milk.png',
-            'ألبان': 'assets/images/white_cheese.jpg',
-            'مزارع': 'assets/images/algerian_farmer.jpg',
-            'فريق': 'assets/images/algerian_farmer.jpg',
-            'hero': 'assets/images/hero.jpg',
-            'المنتجات الغذائية': 'assets/images/hero.jpg',
-            'default': 'assets/images/hero.jpg'
+            'خبز ريفي': './sourdough_bread.jpg',
+            'خبز': './sourdough_bread.jpg',
+            'كسكس الشعير': './couscous.jpg',
+            'كسكس البلوط': './acorn_couscous.png',
+            'كسكس الخروب': './carob_couscous.png',
+            'كسكس': './couscous.jpg',
+            'سباغيتي': './whole_wheat_spaghetti.png',
+            'رشتة': './whole_wheat_rechta.png',
+            'معجنات': './couscous.jpg',
+            'جبن أبيض': './white_cheese.jpg',
+            'جبن إيدام': './edam_cheese.png',
+            'جبن ايدام': './edam_cheese.png',
+            'جبن': './white_cheese.jpg',
+            'زبادي': './greek_yogurt.png',
+            'حليب جوز الهند': './coconut_milk.png',
+            'حليب': './coconut_milk.png',
+            'ألبان': './white_cheese.jpg',
+            'مزارع': './algerian_farmer.jpg',
+            'فريق': './algerian_farmer.jpg',
+            'hero': './hero.jpg',
+            'المنتجات الغذائية': './hero.jpg',
+            'default': './hero.jpg'
         };
 
         // 1. Resolve product cards accurately based on link ID or Title Text
@@ -325,7 +325,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const match = text.match(/\[(?:صورة\s+)?([^\]]+)\]/);
                 if (match) {
                     const keyword = match[1].trim().toLowerCase();
-                    let matchedImage = 'assets/images/hero.jpg'; // default
+                    let matchedImage = './hero.jpg'; // default
                     
                     let bestMatchKey = '';
                     for (const key in imageMap) {
@@ -661,7 +661,7 @@ class ShoppingCart {
                 let id = 'default';
                 let title = 'منتج';
                 let price = 500;
-                let image = 'assets/images/hero.jpg';
+                let image = './hero.jpg';
                 let quantity = 1;
 
                 // If on product detail page
@@ -725,9 +725,9 @@ class ShoppingCart {
             subtotal += itemTotal;
 
             let imgSrc = item.image;
-            if(!imgSrc.startsWith('http') && window.location.pathname.includes('/pages/')) {
-                // If the cart page is inside /pages/, ensure relative path is correct. 
-                // But wait, the saved image path might be 'assets/images/...' or 'http://...'
+            if(!imgSrc.startsWith('http') && window.location.pathname.includes('./')) {
+                // If the cart page is inside ./, ensure relative path is correct. 
+                // But wait, the saved image path might be './...' or 'http://...'
                 // If it's already an absolute or blob URL it works. If it's relative, we add '../'
                 if(!imgSrc.startsWith('../') && !imgSrc.startsWith('/')) {
                     imgSrc = '../' + imgSrc;

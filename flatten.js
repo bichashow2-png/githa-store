@@ -42,11 +42,14 @@ for (const file of processFiles) {
     let content = fs.readFileSync(fullPath, 'utf8');
     
     // Replace paths
-    content = content.replace(/\.\.?\/assets\/css\//g, './');
-    content = content.replace(/\.\.?\/assets\/images\//g, './');
-    content = content.replace(/\.\.?\/assets\/js\//g, './');
-    content = content.replace(/\.\.?\/pages\//g, './');
-    content = content.replace(/\.\/pages\//g, './');
+    content = content.replace(/\.?\.?\/assets\/css\//g, './');
+    content = content.replace(/\.?\.?\/assets\/images\//g, './');
+    content = content.replace(/\.?\.?\/assets\/js\//g, './');
+    content = content.replace(/\.?\.?\/pages\//g, './');
+    content = content.replace(/assets\/images\//g, './');
+    content = content.replace(/assets\/css\//g, './');
+    content = content.replace(/assets\/js\//g, './');
+    content = content.replace(/pages\//g, './');
     content = content.replace(/\"\.\.\/index\.html\"/g, '"./index.html"');
     
     fs.writeFileSync(fullPath, content);
